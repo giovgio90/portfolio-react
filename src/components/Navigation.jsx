@@ -18,8 +18,8 @@ const Navigation = () => {
       case "/portfolio":
         setActiveNavItem("portfolio");
         break;
-      case "/contact-us":
-        setActiveNavItem("contact-us");
+      case "/contact":
+        setActiveNavItem("contact");
         break;
       default:
         setActiveNavItem("");
@@ -33,17 +33,31 @@ const Navigation = () => {
   const [click, setClick] = useState(false);
   const handleClick = () => setClick(!click);
 
+  useEffect(() => {
+    let scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+
+    if (click && window.innerWidth <= 992) {
+      document.body.style.overflow = "hidden";
+      document.body.style.paddingRight = `${scrollbarWidth}px`;
+      document.body.style.backgroundColor = "#040e20";
+    } else {
+      document.body.style.overflow = "visible";
+      document.body.style.paddingRight = "0px";
+      document.body.style.backgroundColor = "initial";
+    }
+  }, [click]);
+
   return (
     <Navbar expand="lg" className="navbar">
       <Container>
-        <div className="nav-logo d-flex ">
+        <div className="nav-logo d-flex align-items-center">
           <img src={Logo} alt="Logo" width="70px" />
           Giovanni Giordano <i className="fas fa-code"></i>
         </div>
 
         <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={handleClick} />
 
-        <Navbar.Collapse id="basic-navbar-nav" className="nav-menu">
+        <Navbar.Collapse id="basic-navbar-nav" className={`justify-content-center ${click ? "show" : ""}`}>
           <Nav className="ms-auto">
             <Nav.Item className={activeNavItem === "home" ? "nav-link active" : "nav-link"}>
               <Link
@@ -74,7 +88,7 @@ const Navigation = () => {
               </Link>
             </Nav.Item>
 
-            <Nav.Item className={activeNavItem === "contact-us" ? "nav-link active" : "nav-link"}>
+            <Nav.Item className={activeNavItem === "contact" ? "nav-link active" : "nav-link"}>
               <Link
                 to="/contact"
                 onClick={() => handleNavItemClick("contact")}
