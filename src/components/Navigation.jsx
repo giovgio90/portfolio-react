@@ -50,11 +50,12 @@ const Navigation = () => {
   return (
     <Navbar expand="lg" className="navbar">
       <Container>
-        <div className="nav-logo d-flex align-items-center">
-          <img className="logo" src={Logo} alt="Logo" width="70px" />
-          Giovanni Giordano <i className="fas fa-code"></i>
-        </div>
-
+        <Link to="/" style={{ textDecoration: "none" }}>
+          <div className="nav-logo d-flex align-items-center">
+            <img className="logo" src={Logo} alt="Logo" width="70px" />
+            Giovanni Giordano <i className="fas fa-code"></i>
+          </div>
+        </Link>
         <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={handleClick} />
 
         <Navbar.Collapse id="basic-navbar-nav" className={`justify-content-center ${click ? "show" : ""}`}>
