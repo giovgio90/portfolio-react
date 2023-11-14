@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/portfolio-react/static/css/main.ca74991a.css",
+    "main.js": "/portfolio-react/static/js/main.8e4e40d3.js",
+    "static/media/TravelStay.png": "/portfolio-react/static/media/TravelStay.d6029224ad84b278438c.png",
+    "static/media/NetFlix-Clone.png": "/portfolio-react/static/media/NetFlix-Clone.0b2204765fd44e6589bb.png",
+    "static/media/MediumClone.png": "/portfolio-react/static/media/MediumClone.78ba609a32559fc002d6.png",
+    "static/media/WeatherApp.png": "/portfolio-react/static/media/WeatherApp.550e16087538bf5a8bb0.png",
+    "static/media/Background.png": "/portfolio-react/static/media/Background.c8e4ce5ca02f9eebc83b.png",
+    "static/media/photo.jpeg": "/portfolio-react/static/media/photo.e5cbeaa5e0fd7a4cf30b.jpeg",
+    "static/media/Logo.png": "/portfolio-react/static/media/Logo.04151cc81576b0777b00.png",
+    "static/media/github.png": "/portfolio-react/static/media/github.a855c3975c028d8069f5.png",
+    "index.html": "/portfolio-react/index.html",
+    "main.ca74991a.css.map": "/portfolio-react/static/css/main.ca74991a.css.map",
+    "main.8e4e40d3.js.map": "/portfolio-react/static/js/main.8e4e40d3.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ca74991a.css",
+    "static/js/main.8e4e40d3.js"
+  ]
+}
