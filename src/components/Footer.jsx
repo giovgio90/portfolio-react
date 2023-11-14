@@ -66,7 +66,7 @@ const Footer = () => {
               </div>
             </Col>
             <Col xs={12} md={6}>
-              <div className="mt-2" style={{ fontFamily: "Caveat, cursive", fontSize: "1.4rem" }}>
+              <div className="mt-4 mt-lg-2" style={{ fontFamily: "Caveat, cursive", fontSize: "1.4rem" }}>
                 <p className="text-white">
                   {" "}
                   <span style={{ color: "#D4FF00" }}>" </span>Every line of code is an opportunity, a digital brush for

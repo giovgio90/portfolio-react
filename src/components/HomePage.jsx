@@ -34,16 +34,22 @@ const HomePage = () => {
         <Row className="mt-3">
           <Col lg={5} className="text-start">
             <motion.h1
-              className="display-1 fw-bold text-white mb-0"
+              className="homepage-title display-1 fw-bold text-white mb-0"
               style={{ fontSize: "7rem" }}
               initial="hidden"
               animate="visible"
               variants={container}
             >
-              <motion.span variants={wordAnimation}>Welcome</motion.span>{" "}
-              <motion.span variants={wordAnimation}>to</motion.span>{" "}
-              <motion.span variants={wordAnimation}>my</motion.span>{" "}
-              <motion.span style={{ color: "#D4FF00" }} variants={wordAnimation}>
+              <motion.span className="homepage-title" variants={wordAnimation}>
+                Welcome
+              </motion.span>{" "}
+              <motion.span className="homepage-title" variants={wordAnimation}>
+                to
+              </motion.span>{" "}
+              <motion.span className="homepage-title" variants={wordAnimation}>
+                my
+              </motion.span>{" "}
+              <motion.span className="homepage-title" style={{ color: "#D4FF00" }} variants={wordAnimation}>
                 Profile.
               </motion.span>
             </motion.h1>
