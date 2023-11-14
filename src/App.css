@@ -233,6 +233,10 @@ h1 {
     font-size: 6.1rem;
     line-height: 1;
   }
+
+  .navbar-nav {
+    margin-top: 40px;
+  }
 }
 
 @media screen and (max-width: 991px) {
@@ -244,6 +248,9 @@ h1 {
     border: 2px solid #d4ff00;
 
     padding: 10px 11px;
+  }
+
+  .navbar-nav {
     margin-top: 40px;
   }
 
