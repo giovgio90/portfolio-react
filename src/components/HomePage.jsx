@@ -14,7 +14,7 @@ const HomePage = () => {
       opacity: 1,
       transition: {
         delay: 0.5,
-        staggerChildren: 0.2, // La distanza temporale tra l'animazione delle parole
+        staggerChildren: 0.2,
       },
     },
   };
