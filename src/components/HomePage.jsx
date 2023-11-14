@@ -1,33 +1,73 @@
 import Photo from "../assets/photo.jpeg";
-import { Card, Col, Container, Row } from "react-bootstrap";
+import { motion } from "framer-motion";
+import { Button, Card, Col, Container, Row } from "react-bootstrap";
 import Navigation from "./Navigation";
 
 const HomePage = () => {
+  const apriPDF = () => {
+    window.open(`${process.env.PUBLIC_URL}/../assets/curriculum.pdf`);
+  };
+
+  const container = {
+    hidden: { opacity: 1 },
+    visible: {
+      opacity: 1,
+      transition: {
+        delay: 0.5,
+        staggerChildren: 0.2, // La distanza temporale tra l'animazione delle parole
+      },
+    },
+  };
+
+  const wordAnimation = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+    },
+  };
+
   return (
     <>
       <Navigation />
-      <Container>
+      <Container className="mb-5">
         <Row className="mt-3">
           <Col lg={5} className="text-start">
-            <h1 className="display-1 fw-bold text-white mb-0" style={{ fontSize: "7rem" }}>
-              Welcome to my <span style={{ color: "#D4FF00" }}>Profile.</span>
-            </h1>
+            <motion.h1
+              className="display-1 fw-bold text-white mb-0"
+              style={{ fontSize: "7rem" }}
+              initial="hidden"
+              animate="visible"
+              variants={container}
+            >
+              <motion.span variants={wordAnimation}>Welcome</motion.span>{" "}
+              <motion.span variants={wordAnimation}>to</motion.span>{" "}
+              <motion.span variants={wordAnimation}>my</motion.span>{" "}
+              <motion.span style={{ color: "#D4FF00" }} variants={wordAnimation}>
+                Profile.
+              </motion.span>
+            </motion.h1>
           </Col>
           <Col lg={7}>
             <div className="w-lg-100 mb-3">
               <Row>
                 <Col xs={12} md={6} lg={6}>
-                  <Card.Img className="rounded-2 mt-3" variant="top" src={Photo} />
+                  <Card.Img
+                    className="rounded-2  mt-4"
+                    style={{ border: "2px solid #D4FF00" }}
+                    variant="top"
+                    src={Photo}
+                  />
                 </Col>
                 <Col xs={12} md={6} lg={6}>
                   <div className="my-lg-5">
-                    <div className="title mt-3 mt-md-3 mt-lg-0">
-                      <h4 className="mb-0 " style={{ color: "#D4FF00" }}>
+                    <div className="title mt-3 mt-md-4 mt-lg-0">
+                      <h4 className="mb-0 " style={{ color: "#D4FF00", fontFamily: "Kanit, sans-serif" }}>
                         Front End Developer
                       </h4>
                     </div>
                     <div className="text mt-4">
-                      <h4 className="mb-0 pb-3 " style={{ color: "white" }}>
+                      <h4 className="mb-0 pb-3 " style={{ color: "white", fontFamily: "Kanit, sans-serif" }}>
                         Hard Skills
                       </h4>
                       <svg
@@ -194,6 +234,15 @@ const HomePage = () => {
                           d="M39.194,26.084c0,0-1.787-1.192-3.807-1.192s-2.747,0.96-2.747,1.986 c0,2.648,7.381,2.383,7.381,7.712c0,8.209-11.254,4.568-11.254,4.568V35.22c0,0,2.152,1.622,4.733,1.622s2.483-1.688,2.483-1.92 c0-2.449-7.315-2.449-7.315-7.878c0-7.381,10.658-4.469,10.658-4.469L39.194,26.084z"
                         ></path>
                       </svg>
+                    </div>
+                    <div className="text mt-4">
+                      <Button
+                        className="button-cv"
+                        style={{ color: "white", fontFamily: "Kanit, sans-serif" }}
+                        onClick={apriPDF}
+                      >
+                        <h5 className="mb-0">My Curriculum Vitae</h5>
+                      </Button>
                     </div>
                   </div>
                 </Col>

@@ -106,6 +106,10 @@ h1 {
   display: none;
 }
 
+.navbar-light .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='%23d4ff00' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
 .title {
   background-color: #040e20b2;
   border-radius: 10px;
@@ -168,9 +172,62 @@ h1 {
   background: rgb(253, 253, 253);
 }
 
+.button-cv {
+  background-color: transparent;
+  border: none;
+  position: relative;
+}
+
+.button-cv:after {
+  content: "";
+  display: block;
+  height: 3px;
+  position: absolute;
+  bottom: 0px;
+  width: 0;
+  background: transparent;
+  transition: width 0.3s ease, background-color 0.5s ease;
+}
+
+.btn-primary {
+  --bs-btn-active-bg: none;
+}
+
+.button-cv:hover {
+  background: transparent;
+}
+
+.button-cv:hover:after {
+  width: 88%;
+
+  background: #d4ff00;
+}
+
+.image-portfolio {
+  transition: transform 0.2s;
+}
+
+.image-portfolio:hover {
+  transform: scale(1.05);
+}
+
 /*FOOTER*/
 .footer-sec {
   background-color: #040e20;
+}
+
+.footer-copyright {
+  background-color: #ffffff;
+}
+
+@media screen and (max-width: 448px) {
+  .nav-logo {
+    font-size: 1.7rem;
+  }
+
+  .logo {
+    width: 50px;
+  }
 }
 
 @media screen and (max-width: 991px) {

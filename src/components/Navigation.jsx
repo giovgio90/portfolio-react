@@ -51,7 +51,7 @@ const Navigation = () => {
     <Navbar expand="lg" className="navbar">
       <Container>
         <div className="nav-logo d-flex align-items-center">
-          <img src={Logo} alt="Logo" width="70px" />
+          <img className="logo" src={Logo} alt="Logo" width="70px" />
           Giovanni Giordano <i className="fas fa-code"></i>
         </div>
 
@@ -64,8 +64,9 @@ const Navigation = () => {
                 to="/"
                 onClick={() => handleNavItemClick("home")}
                 className={activeNavItem === "home" ? "navbar-link active" : "navbar-link"}
+                style={{ fontFamily: "Kanit, sans-serif", fontSize: "1.1rem" }}
               >
-                Home
+                HOME
               </Link>
             </Nav.Item>
             <Nav.Item className={activeNavItem === "about-me" ? "nav-link active" : "nav-link"}>
@@ -73,8 +74,9 @@ const Navigation = () => {
                 to="/about-me"
                 onClick={() => handleNavItemClick("about-me")}
                 className={activeNavItem === "about-me" ? "navbar-link active" : "navbar-link"}
+                style={{ fontFamily: "Kanit, sans-serif", fontSize: "1.1rem" }}
               >
-                About me
+                ABOUT ME
               </Link>
             </Nav.Item>
 
@@ -83,8 +85,9 @@ const Navigation = () => {
                 to="/portfolio"
                 onClick={() => handleNavItemClick("portfolio")}
                 className={activeNavItem === "portfolio" ? "navbar-link active" : "navbar-link"}
+                style={{ fontFamily: "Kanit, sans-serif", fontSize: "1.1rem" }}
               >
-                Portfolio
+                PORTFOLIO
               </Link>
             </Nav.Item>
 
@@ -93,8 +96,9 @@ const Navigation = () => {
                 to="/contact"
                 onClick={() => handleNavItemClick("contact")}
                 className={activeNavItem === "contact" ? "navbar-link active" : "navbar-link"}
+                style={{ fontFamily: "Kanit, sans-serif", fontSize: "1.1rem" }}
               >
-                Contact
+                CONTACT
               </Link>
             </Nav.Item>
           </Nav>

@@ -5,13 +5,14 @@ const AboutMe = () => {
   return (
     <>
       <Navigation />
-      <Container>
-        <div className="my-5 text-start text-white">
+      <Container className="mb-0">
+        <div className="my-5 text-start text-white" style={{ fontFamily: "Raleway, sans-serif" }}>
+          <h2 style={{ fontFamily: "Kanit, sans-serif" }}>Who is Giovanni Giordano</h2>
           <h5 className="mb-3">
-            Hello! I'm Giovanni Giordano, a passionate Front-End Developer successfully completing the course at
-            EPICODE, where I've gained advanced skills in the world of web development. My passion for aesthetically
-            pleasing and functional design has driven me to delve deeper into my abilities in HTML, CSS, and JavaScript,
-            transforming ideas into incredible digital experiences.
+            Hello! I'm a passionate Front-End Developer successfully completing the course at EPICODE, where I've gained
+            advanced skills in the world of web development. My passion for aesthetically pleasing and functional design
+            has driven me to delve deeper into my abilities in HTML, CSS, and JavaScript, transforming ideas into
+            incredible digital experiences.
           </h5>
           <h5 className="mb-3">
             My educational journey has allowed me to dive into the intricacies of front-end development, exploring the
