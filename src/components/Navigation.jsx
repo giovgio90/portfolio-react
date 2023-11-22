@@ -122,14 +122,14 @@ const Navigation = () => {
               </Link>
             </Nav.Item>
             <Row>
-              <Col xs={6} className="pe-0">
+              <Col xs={6} className="pe-1 text-end">
                 <Button
-                  className="p-0"
+                  className="p-0 "
                   style={{ background: "none", border: "none" }}
                   onClick={() => changeLanguage("it")}
                 >
                   <div
-                    className="text-end text-lg-center"
+                    className=" text-lg-center"
                     style={{ height: "20px", marginTop: "10px" }}
                     onClick={handleClickItaly}
                   >
@@ -138,14 +138,14 @@ const Navigation = () => {
                 </Button>
               </Col>
 
-              <Col xs={6}>
+              <Col xs={6} className="ps-1 text-start">
                 <Button
                   className="p-0"
                   style={{ background: "none", border: "none" }}
                   onClick={() => changeLanguage("en")}
                 >
                   <div
-                    className="text-start text-lg-center"
+                    className=" text-lg-center"
                     style={{ height: "20px", marginTop: "10px" }}
                     onClick={handleClickEngland}
                   >

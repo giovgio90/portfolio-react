@@ -1,7 +1,10 @@
 import { Col, Container, Row } from "react-bootstrap";
+import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
+  const { t } = useTranslation();
+
   return (
     <>
       <div className="footer-sec mt-auto">
@@ -9,7 +12,7 @@ const Footer = () => {
           <Row>
             <Col>
               <div className="text-start text-white">
-                <h6 style={{ fontFamily: "Kanit, sans-serif" }}>CONTACT</h6>
+                <h6 style={{ fontFamily: "Kanit, sans-serif" }}>{t("CONTACT")}</h6>
                 <p className="mb-1" style={{ fontSize: "0.8rem" }}>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -69,8 +72,10 @@ const Footer = () => {
               <div className="mt-4 mt-lg-2" style={{ fontFamily: "Caveat, cursive", fontSize: "1.4rem" }}>
                 <p className="text-white">
                   {" "}
-                  <span style={{ color: "#D4FF00" }}>" </span>Every line of code is an opportunity, a digital brush for
-                  painting interactive worlds and transform the ordinary into the extraordinary.
+                  <span style={{ color: "#D4FF00" }}>" </span>
+                  {t(
+                    "Every line of code is an opportunity, a digital brush for painting interactive worlds and transform the ordinary into the extraordinary."
+                  )}
                   <span style={{ color: "#D4FF00" }}> "</span>
                 </p>
               </div>

@@ -2,8 +2,11 @@ import GitHub from "../assets/github.png";
 import { Button, Col, Container, Form, Row } from "react-bootstrap";
 import Navigation from "./Navigation";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const Contact = () => {
+  const { t } = useTranslation();
+
   return (
     <>
       <Navigation />
@@ -11,11 +14,12 @@ const Contact = () => {
         <Row className=" my-5">
           <Col xs={12} lg={5} className="text-white text-start">
             <h4 className="mb-0" style={{ fontFamily: "Kanit, sans-serif", fontSize: "1.3rem" }}>
-              CONTACT ME
+              {t("CONTACT ME")}
             </h4>
             <p style={{ fontFamily: "Raleway, sans-serif" }}>
-              If you are interested in collaboration, have questions, or would like to discuss job opportunities, please
-              feel free to contact me!
+              {t(
+                "If you are interested in collaboration, have questions, or would like to discuss job opportunities, please feel free to contact me!"
+              )}
             </p>
             <h5 className="mt-5">
               <svg
@@ -75,7 +79,7 @@ const Contact = () => {
           <Col xs={12} lg={6} className="ms-auto mt-5 mt-lg-0">
             <div className="text-white text-start">
               <h5 style={{ fontFamily: "Raleway, sans-serif" }}>
-                Or send me a message and I will get back to you as soon as possible
+                {t("Or send me a message and I will get back to you as soon as possible")}
               </h5>
               <div className="form">
                 <Form action="https://formspree.io/f/xrgwvgvk" method="POST" className="text-start">
@@ -84,13 +88,13 @@ const Contact = () => {
                       className="mb-0"
                       style={{ fontFamily: "Kanit, sans-serif", fontSize: "0.9rem", fontWeight: "500" }}
                     >
-                      NAME
+                      {t("NAME")}
                     </Form.Label>
                     <Form.Control
                       style={{ fontFamily: "Raleway, sans-serif" }}
                       type="text"
                       name="name"
-                      placeholder="Insert your name"
+                      placeholder={t("Insert your name")}
                       required
                     />
                   </Form.Group>
@@ -105,7 +109,7 @@ const Contact = () => {
                       style={{ fontFamily: "Raleway, sans-serif" }}
                       type="email"
                       name="email"
-                      placeholder="Insert your email"
+                      placeholder={t("Insert your email")}
                       required
                     />
                   </Form.Group>
@@ -114,13 +118,13 @@ const Contact = () => {
                       className="mb-0"
                       style={{ fontFamily: "Kanit, sans-serif", fontSize: "0.9rem", fontWeight: "500" }}
                     >
-                      MESSAGE
+                      {t("MESSAGE")}
                     </Form.Label>
                     <Form.Control
                       style={{ fontFamily: "Raleway, sans-serif" }}
                       as="textarea"
                       name="message"
-                      placeholder="Insert your message"
+                      placeholder={t("Insert your message")}
                       required
                     />
                   </Form.Group>
@@ -131,7 +135,7 @@ const Contact = () => {
                       type="submit"
                       className="button-form"
                     >
-                      SEND
+                      {t("SEND")}
                     </Button>
                   </div>
                 </Form>

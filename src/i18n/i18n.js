@@ -63,6 +63,39 @@ i18n.use(initReactI18next).init({
 
         "Thank you for taking the time to get to know a bit about me!":
           "Grazie per aver trovato il tempo di conoscere un po' di me!",
+
+        "The TravelStay platform offers simplified reservations for travel and stays, with reviews and tools to facilitate travel planning.":
+          "La piattaforma TravelStay offre prenotazioni semplificate per viaggi e soggiorni, con recensioni e strumenti per facilitare la pianificazione del viaggio",
+
+        "Watch it on GitHub": "Guarda su GitHub",
+
+        "The Weather app provides accurate and local weather forecasts with a user-friendly interface for quick reference of weather conditions.":
+          "La Weather app fornisce previsioni meteo accurate e locali con un'interfaccia facile da usare per una rapida consultazione delle condizioni meteo",
+
+        "I created a Netflix clone with a visual interface as similar as possible to the original.":
+          "Ho creato un clone di Netflix con un'interfaccia visiva il più possibile simile all'originale",
+
+        "I developed a clone of Medium faithful in interface, integrating similar functionality to the original for the navbar.":
+          "Ho sviluppato un clone di Medium fedele nell'interfaccia, integrando funzionalità simili all'originale per la navbar",
+
+        "CONTACT ME": "CONTATTAMI",
+
+        "If you are interested in collaboration, have questions, or would like to discuss job opportunities, please feel free to contact me!":
+          "Se siete interessati a una collaborazione, avete domande o volete discutere di opportunità di lavoro, contattami ai seguenti indirizzi!",
+
+        "Or send me a message and I will get back to you as soon as possible":
+          "Oppure mandami un messaggio e ti risponderò il prima possibile",
+
+        NAME: "NOME",
+        MESSAGE: "MESSAGGIO",
+        SEND: "INVIA",
+
+        "Every line of code is an opportunity, a digital brush for painting interactive worlds and transform the ordinary into the extraordinary.":
+          "Ogni riga di codice è un'opportunità, un pennello digitale per dipingere mondi interattivi e trasformare l'ordinario in straordinario",
+
+        "Insert your message": "Inserisci il tuo messaggio",
+        "Insert your email": "Inserisci la tua email",
+        "Insert your name": "Inserisci il tuo nome",
       },
     },
   },

@@ -7,9 +7,11 @@ import Navigation from "./Navigation";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import Loading from "./Loading";
+import { useTranslation } from "react-i18next";
 
 const Portfolio = () => {
   const [isLoading, setIsLoading] = useState(true);
+  const { t } = useTranslation();
 
   useEffect(() => {
     const delay = setTimeout(() => {
@@ -34,14 +36,15 @@ const Portfolio = () => {
                   <div className="my-auto">
                     <Card.Title style={{ fontFamily: "Kanit, sans-serif" }}>TravelStay</Card.Title>
                     <Card.Text style={{ fontFamily: "Raleway, sans-serif" }}>
-                      The TravelStay platform offers simplified reservations for travel and stays, with reviews and
-                      tools to facilitate travel planning.
+                      {t(
+                        "The TravelStay platform offers simplified reservations for travel and stays, with reviews and tools to facilitate travel planning."
+                      )}
                     </Card.Text>
                   </div>
                   <div className="mt-auto">
                     <Link to="https://github.com/giovgio90/travelstay-project-react">
                       <Button className="button-card" variant="primary" style={{ fontFamily: "Kanit, sans-serif" }}>
-                        Watch it on GitHub
+                        {t("Watch it on GitHub")}
                       </Button>
                     </Link>
                   </div>
@@ -59,14 +62,15 @@ const Portfolio = () => {
                   <div className="my-auto">
                     <Card.Title style={{ fontFamily: "Kanit, sans-serif" }}>Weather app</Card.Title>
                     <Card.Text style={{ fontFamily: "Raleway, sans-serif" }}>
-                      The Weather app provides accurate and local weather forecasts with a user-friendly interface for
-                      quick reference of weather conditions.
+                      {t(
+                        "The Weather app provides accurate and local weather forecasts with a user-friendly interface for quick reference of weather conditions."
+                      )}
                     </Card.Text>
                   </div>
                   <div>
                     <Link to="https://github.com/giovgio90/weather-app">
                       <Button className="button-card" variant="primary" style={{ fontFamily: "Kanit, sans-serif" }}>
-                        Watch it on GitHub
+                        {t("Watch it on GitHub")}
                       </Button>
                     </Link>
                   </div>
@@ -84,13 +88,13 @@ const Portfolio = () => {
                   <div className="my-auto">
                     <Card.Title style={{ fontFamily: "Kanit, sans-serif" }}>NetFlix Clone</Card.Title>
                     <Card.Text className="mb-0" style={{ fontFamily: "Raleway, sans-serif" }}>
-                      I created a Netflix clone with a visual interface as similar as possible to the original.
+                      {t("I created a Netflix clone with a visual interface as similar as possible to the original.")}
                     </Card.Text>
                   </div>
                   <div className="mt-auto">
                     <Link to="https://github.com/giovgio90/S6-L5-Progetto-Settimanale">
                       <Button className="button-card" variant="primary" style={{ fontFamily: "Kanit, sans-serif" }}>
-                        Watch it on GitHub
+                        {t("Watch it on GitHub")}
                       </Button>
                     </Link>
                   </div>
@@ -108,14 +112,15 @@ const Portfolio = () => {
                   <div className="my-auto">
                     <Card.Title style={{ fontFamily: "Kanit, sans-serif" }}>Medium Clone</Card.Title>
                     <Card.Text className="mb-0" style={{ fontFamily: "Raleway, sans-serif" }}>
-                      I developed a clone of Medium faithful in interface, integrating similar functionality to the
-                      original for the navbar.
+                      {t(
+                        "I developed a clone of Medium faithful in interface, integrating similar functionality to the original for the navbar."
+                      )}
                     </Card.Text>
                   </div>
                   <div className="mt-auto">
                     <Link to="https://github.com/giovgio90/S5-L5-Progetto-settimanale">
                       <Button className="button-card" variant="primary" style={{ fontFamily: "Kanit, sans-serif" }}>
-                        Watch it on GitHub
+                        {t("Watch it on GitHub")}
                       </Button>
                     </Link>
                   </div>
