@@ -220,6 +220,26 @@ h1 {
   background-color: #ffffff;
 }
 
+/* LOADING*/
+
+.card-loading {
+  border: none;
+}
+
+.placeholder-background {
+  background-color: #8a8a8a;
+  padding: 85px;
+}
+
+.body-card {
+  background-color: #041026;
+}
+
+.loading-button {
+  border: none;
+  background-color: #d4ff00 !important;
+}
+
 @media screen and (max-width: 448px) {
   .nav-logo {
     font-size: 1.7rem;

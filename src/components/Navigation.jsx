@@ -1,11 +1,20 @@
 import Logo from "../assets/Logo.png";
+import Italy from "../assets/Italy.png";
+import England from "../assets/England.png";
 import { useEffect, useState } from "react";
-import { Container, Nav, Navbar } from "react-bootstrap";
+import { Button, Col, Container, Nav, Navbar, Row } from "react-bootstrap";
 import { Link, useLocation } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const Navigation = () => {
   const [activeNavItem, setActiveNavItem] = useState("");
   const location = useLocation();
+  const { t, i18n } = useTranslation();
+
+  const changeLanguage = (language) => {
+    console.log(`Changing language to: ${language}`);
+    i18n.changeLanguage(language);
+  };
 
   useEffect(() => {
     switch (location.pathname) {
@@ -47,6 +56,16 @@ const Navigation = () => {
     }
   }, [click]);
 
+  const handleClickItaly = () => {
+    console.log("Italy clicked");
+    changeLanguage("it");
+  };
+
+  const handleClickEngland = () => {
+    console.log("England clicked");
+    changeLanguage("en");
+  };
+
   return (
     <Navbar expand="lg" className="navbar">
       <Container>
@@ -67,7 +86,7 @@ const Navigation = () => {
                 className={activeNavItem === "home" ? "navbar-link active" : "navbar-link"}
                 style={{ fontFamily: "Kanit, sans-serif", fontSize: "1.1rem" }}
               >
-                HOME
+                {t("HOME")}
               </Link>
             </Nav.Item>
             <Nav.Item className={activeNavItem === "about-me" ? "nav-link active" : "nav-link"}>
@@ -77,7 +96,7 @@ const Navigation = () => {
                 className={activeNavItem === "about-me" ? "navbar-link active" : "navbar-link"}
                 style={{ fontFamily: "Kanit, sans-serif", fontSize: "1.1rem" }}
               >
-                ABOUT ME
+                {t("ABOUT ME")}
               </Link>
             </Nav.Item>
 
@@ -88,7 +107,7 @@ const Navigation = () => {
                 className={activeNavItem === "portfolio" ? "navbar-link active" : "navbar-link"}
                 style={{ fontFamily: "Kanit, sans-serif", fontSize: "1.1rem" }}
               >
-                PORTFOLIO
+                {t("PORTFOLIO")}
               </Link>
             </Nav.Item>
 
@@ -99,9 +118,42 @@ const Navigation = () => {
                 className={activeNavItem === "contact" ? "navbar-link active" : "navbar-link"}
                 style={{ fontFamily: "Kanit, sans-serif", fontSize: "1.1rem" }}
               >
-                CONTACT
+                {t("CONTACT")}
               </Link>
             </Nav.Item>
+            <Row>
+              <Col xs={6} className="pe-0">
+                <Button
+                  className="p-0"
+                  style={{ background: "none", border: "none" }}
+                  onClick={() => changeLanguage("it")}
+                >
+                  <div
+                    className="text-end text-lg-center"
+                    style={{ height: "20px", marginTop: "10px" }}
+                    onClick={handleClickItaly}
+                  >
+                    <img src={Italy} alt="Italy" style={{ width: "25px" }} />
+                  </div>
+                </Button>
+              </Col>
+
+              <Col xs={6}>
+                <Button
+                  className="p-0"
+                  style={{ background: "none", border: "none" }}
+                  onClick={() => changeLanguage("en")}
+                >
+                  <div
+                    className="text-start text-lg-center"
+                    style={{ height: "20px", marginTop: "10px" }}
+                    onClick={handleClickEngland}
+                  >
+                    <img src={England} alt="England" style={{ width: "25px" }} />
+                  </div>
+                </Button>
+              </Col>
+            </Row>
           </Nav>
         </Navbar.Collapse>
       </Container>

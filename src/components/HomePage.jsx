@@ -2,8 +2,14 @@ import Photo from "../assets/photo.jpeg";
 import { motion } from "framer-motion";
 import { Button, Card, Col, Container, Row } from "react-bootstrap";
 import Navigation from "./Navigation";
+import { useEffect, useState } from "react";
+import LoadingTwo from "./LoadingTwo";
+import { useTranslation } from "react-i18next";
 
 const HomePage = () => {
+  const { t } = useTranslation();
+
+  const [isLoading, setIsLoading] = useState(true);
   const apriPDF = () => {
     window.open(`${process.env.PUBLIC_URL}/../assets/curriculum.pdf`);
   };
@@ -27,6 +33,14 @@ const HomePage = () => {
     },
   };
 
+  useEffect(() => {
+    const delay = setTimeout(() => {
+      setIsLoading(false);
+    }, 2000);
+
+    return () => clearTimeout(delay);
+  }, []);
+
   return (
     <>
       <Navigation />
@@ -41,30 +55,34 @@ const HomePage = () => {
               variants={container}
             >
               <motion.span className="homepage-title" variants={wordAnimation}>
-                Welcome
+                {t("Welcome")}
               </motion.span>{" "}
               <motion.span className="homepage-title" variants={wordAnimation}>
-                to
+                {t("to")}
               </motion.span>{" "}
               <motion.span className="homepage-title" variants={wordAnimation}>
-                my
+                {t("my")}
               </motion.span>{" "}
               <motion.span className="homepage-title" style={{ color: "#D4FF00" }} variants={wordAnimation}>
-                Profile.
+                {t("Profile.")}
               </motion.span>
             </motion.h1>
           </Col>
           <Col lg={7}>
             <div className="w-lg-100 mb-3">
               <Row>
-                <Col xs={12} md={6} lg={6}>
-                  <Card.Img
-                    className="rounded-2  mt-4"
-                    style={{ border: "2px solid #D4FF00" }}
-                    variant="top"
-                    src={Photo}
-                  />
-                </Col>
+                {isLoading ? (
+                  <LoadingTwo />
+                ) : (
+                  <Col xs={12} md={6} lg={6}>
+                    <Card.Img
+                      className="rounded-2  mt-4"
+                      style={{ border: "2px solid #D4FF00" }}
+                      variant="top"
+                      src={Photo}
+                    />
+                  </Col>
+                )}
                 <Col xs={12} md={6} lg={6}>
                   <div className="my-lg-5">
                     <div className="title mt-3 mt-md-4 mt-lg-0">
@@ -247,7 +265,7 @@ const HomePage = () => {
                         style={{ color: "white", fontFamily: "Kanit, sans-serif" }}
                         onClick={apriPDF}
                       >
-                        <h5 className="mb-0">My Curriculum Vitae</h5>
+                        <h5 className="mb-0">{t("My Curriculum Vitae")}</h5>
                       </Button>
                     </div>
                   </div>
