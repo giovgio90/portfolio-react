@@ -81,7 +81,7 @@ i18n.use(initReactI18next).init({
         "CONTACT ME": "CONTATTAMI",
 
         "If you are interested in collaboration, have questions, or would like to discuss job opportunities, please feel free to contact me!":
-          "Se siete interessati a una collaborazione, avete domande o volete discutere di opportunità di lavoro, contattami ai seguenti indirizzi!",
+          "Se sei interessato/a ad una collaborazione, hai domande o vuoi discutere di opportunità di lavoro, contattami ai seguenti indirizzi!",
 
         "Or send me a message and I will get back to you as soon as possible":
           "Oppure mandami un messaggio e ti risponderò il prima possibile",
@@ -96,6 +96,7 @@ i18n.use(initReactI18next).init({
         "Insert your message": "Inserisci il tuo messaggio",
         "Insert your email": "Inserisci la tua email",
         "Insert your name": "Inserisci il tuo nome",
+        "Available for work": "Disponibile lavorativamente",
       },
     },
   },

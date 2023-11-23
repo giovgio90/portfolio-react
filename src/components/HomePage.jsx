@@ -1,4 +1,5 @@
 import Photo from "../assets/photo.jpeg";
+import Active from "../assets/Active.png";
 import { motion } from "framer-motion";
 import { Button, Card, Col, Container, Row } from "react-bootstrap";
 import Navigation from "./Navigation";
@@ -57,7 +58,7 @@ const HomePage = () => {
               <motion.span
                 className="homepage-title"
                 variants={wordAnimation}
-                style={{ fontSize: t("Welcome") === "Benvenuti" ? "5.8rem" : "" }}
+                style={{ fontSize: t("Welcome") === "Benvenuti" ? "5.7rem" : "" }}
               >
                 {t("Welcome")}
               </motion.span>{" "}
@@ -283,6 +284,14 @@ const HomePage = () => {
                       >
                         <h5 className="mb-0">{t("My Curriculum Vitae")}</h5>
                       </Button>
+                    </div>
+                    <div className="text mt-4">
+                      <h4
+                        className="mb-0 "
+                        style={{ color: "white", fontFamily: "Kanit, sans-serif", fontSize: "1.2rem" }}
+                      >
+                        <img src={Active} alt="Active" width="23px" className="mb-1" /> {t("Available for work")}
+                      </h4>
                     </div>
                   </div>
                 </Col>
