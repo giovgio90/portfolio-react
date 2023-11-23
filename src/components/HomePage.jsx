@@ -54,16 +54,32 @@ const HomePage = () => {
               animate="visible"
               variants={container}
             >
-              <motion.span className="homepage-title" variants={wordAnimation}>
+              <motion.span
+                className="homepage-title"
+                variants={wordAnimation}
+                style={{ fontSize: t("Welcome") === "Benvenuti" ? "6.3rem" : "7rem" }}
+              >
                 {t("Welcome")}
               </motion.span>{" "}
-              <motion.span className="homepage-title" variants={wordAnimation}>
+              <motion.span
+                className="homepage-title"
+                variants={wordAnimation}
+                style={{ fontSize: t("to") === "nel" ? "6.3rem" : "7rem" }}
+              >
                 {t("to")}
               </motion.span>{" "}
-              <motion.span className="homepage-title" variants={wordAnimation}>
+              <motion.span
+                className="homepage-title"
+                variants={wordAnimation}
+                style={{ fontSize: t("my") === "mio" ? "6.3rem" : "7rem" }}
+              >
                 {t("my")}
               </motion.span>{" "}
-              <motion.span className="homepage-title" style={{ color: "#D4FF00" }} variants={wordAnimation}>
+              <motion.span
+                className="homepage-title"
+                style={{ color: "#D4FF00", fontSize: t("Profile.") === "Profilo." ? "6.3rem" : "7rem" }}
+                variants={wordAnimation}
+              >
                 {t("Profile.")}
               </motion.span>
             </motion.h1>
