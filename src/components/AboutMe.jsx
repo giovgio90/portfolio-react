@@ -1,4 +1,5 @@
-import { Container } from "react-bootstrap";
+import Certificate from "../assets/Certificate.png";
+import { Col, Container, Row } from "react-bootstrap";
 import Navigation from "./Navigation";
 import { useTranslation } from "react-i18next";
 
@@ -42,6 +43,17 @@ const AboutMe = () => {
           </h5>
           <h5>{t("Thank you for taking the time to get to know a bit about me!")}</h5>
         </div>
+        <Row className="mb-5">
+          <Col xs={12} md={12} lg={10} className="mx-auto">
+            <img
+              src={Certificate}
+              width="100%"
+              alt="Certificate"
+              className="rounded-2"
+              style={{ border: "2px solid #D4FF00" }}
+            />
+          </Col>
+        </Row>
       </Container>
     </>
   );
